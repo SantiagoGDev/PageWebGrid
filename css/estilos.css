@@ -18,12 +18,13 @@ body{
 	margin-top: 80px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-areas: 'contenido image';
+	grid-template-areas: 'contenido imagen';
 	grid-auto-rows: minmax(200px,1fr);
 	align-items: center;
 }
 .hero-text{
 	padding: 20px;
+	grid-area: contenido;
 }
 .hero__title{
 	font-size: 30px;
@@ -48,9 +49,97 @@ body{
 	background: none;
 	color: #000;
 }
+.hero-ilustration{
+	grid-area: imagen;
+}
 .hero__img{
 	width: 100%;
 	height: 100%
 }
 
 /*              Header              */
+
+/*              Section Services             */
+.services{
+	margin-top: 50px;
+	width: 100%;
+	background: linear-gradient( 180deg, #fff 50%, #000 50% );
+}
+.services-box-cards{
+	padding: 5%;
+	margin: auto;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+	gap:30px;
+}
+.services__card{
+	background: #fff;
+	height: 250px;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,.8);
+	padding: 10px;
+
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	text-align: center;
+}
+.services__card-icon{
+	font-size: 50px;
+}
+/*              Section Services             */
+
+/*              Section About-US             */
+
+.about-us{
+	width: 100%;
+	background: #000;
+	color: #fff;
+}
+.about-us-box-text{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+.about-us__title{
+	padding:  20px 0;
+	font-size: 40px;
+}
+.about-us__parrafo{
+	line-height: 25px;
+}
+.about-us-number{
+	padding: 40px 0;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.about-us__number{
+	font-size: 40px;
+	text-align: center;
+}
+
+
+/*              Section About-US             */
+
+/*              Meadia Queris             */
+@media screen and (max-width: 650px) {
+	.hero{
+		margin-top: 0;
+		grid-template-areas: 'contenido contenido'
+							 'imagen    imagen';				 
+	}
+	.about-us-number{
+		align-items: center;
+	}
+	.about-us__number{
+		width: 45%;
+		margin-bottom: 20px;
+	}
+
+}
+
+/*              Meadia Queris             */
